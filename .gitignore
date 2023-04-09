@@ -2,3 +2,4 @@ datasets/
 report/**
 *.pdf
 rough.ipynb
+*.docx
