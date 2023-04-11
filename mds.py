@@ -195,6 +195,8 @@ def fedML(packet_loss_prob, k):
             accuracy.append(global_acc)
     return accuracy
 
-p = 0.1
-acc = fedML(p, 20)
-np.savetxt('output/mds_prob/acc{}.csv'.format(int(p*100)), acc, delimiter=",")
+import sys
+if __name__ == '__main__':
+    p = float(sys.argv[1])
+    acc = fedML(p, 20)
+    np.savetxt('output/mds_prob/acc{}.csv'.format(int(p*100)), acc, delimiter=",")
